@@ -11,11 +11,8 @@ router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
 
-router.use('/auth', authRoutes);
-router.use('/products', productRoutes);
-router.use('/categories', categoryRoutes);
-router.use('/purchases', purchaseRoutes);
-router.use('/comments', commentRoutes);
-router.use('/discounts', discountRoutes)
+router.use("/auth", authRoutes);
+routes.use('/products', productRoutes);
+
 
 module.exports = router;

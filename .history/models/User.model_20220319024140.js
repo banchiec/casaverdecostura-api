@@ -10,15 +10,11 @@ const userSchema = new Schema(
     password: { 
       type: String
     },
-    role: {
+    role : {
       type: String,
       enum: ['user','admin'],
       default: 'user'
-    },
-    favorities: [{
-      type: Schema.Types.ObjectId,
-      ref: 'Product'
-    }]
+    }
   },
   
   {
