@@ -24,7 +24,7 @@ const productSchema = new Schema({
     size: [
         {
             type: String,
-            default: ["XL, XXL, L, M"]
+            default: ['xs', 's', 'm', 'l','xl']
         }
     ],
     photos: [
