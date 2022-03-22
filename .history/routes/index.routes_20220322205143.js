@@ -5,7 +5,7 @@ const categoryRoutes = require('./category.routes')
 const purchaseRoutes = require('./category.routes')
 const commentRoutes = require('./comment.routes')
 const discountRoutes = require('./discounts.routes')
-const uploadRoutes = require('./upload.routes')
+const uploadRoutes = require('./uploadRoutes')
 // router.use('/uploads', require('./uploads.routes'))
 
 /* GET home page */

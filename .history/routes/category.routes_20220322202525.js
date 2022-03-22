@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
 	try {
 		Category.find()
 		.then((data)=>{
-			console.log(data);
+			console.log(data.data);
 			return res.status(200).json(data)
 		})
 		.catch(error => console.log(error))
