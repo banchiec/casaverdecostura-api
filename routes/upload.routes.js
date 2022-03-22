@@ -11,7 +11,6 @@ router.post('/image', uploader.single("photos"), (req, res) => {
     }
     console.log(req.body)
     res.json({ cloudinary_url: req.file.path })
-
 })
 router.post('/profile', uploader.single("photo_profile"), (req, res) => {
 
