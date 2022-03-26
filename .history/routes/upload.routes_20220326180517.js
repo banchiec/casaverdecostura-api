@@ -3,7 +3,8 @@ const router = express.Router();
 
 const uploader = require('../config/upload.config')
 
-router.post('/image', uploader.single("photo"), (req, res) => {
+router.post('/image', uploader.array("photos",10), (req, res) => {
+
     if (!req.file) {
         res.status(500).json({ code: 500, message: 'Error loading the file' })
         return
