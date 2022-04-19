@@ -14,6 +14,7 @@ const productSchema = new Schema({
         },
         subCategory: {
             type: String,
+          
         }
     },
     description: {
@@ -23,7 +24,7 @@ const productSchema = new Schema({
     size: [
         {
             type: String,
-            default: ['xs', 's', 'm', 'l','xl']
+            default: ['XL', 'XX', 'L', 'M']
         }
     ],
     photos: [
@@ -34,12 +35,14 @@ const productSchema = new Schema({
             },
             color: {
                 type: String, 
+               
             }
         }
     ],
     colors: [
         {
             type: String, 
+           
         }
     ],
 }, { timestamps: true })

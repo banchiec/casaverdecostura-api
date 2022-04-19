@@ -14,6 +14,7 @@ const productSchema = new Schema({
         },
         subCategory: {
             type: String,
+          
         }
     },
     description: {
@@ -34,12 +35,14 @@ const productSchema = new Schema({
             },
             color: {
                 type: String, 
+               
             }
         }
     ],
     colors: [
         {
             type: String, 
+           
         }
     ],
 }, { timestamps: true })

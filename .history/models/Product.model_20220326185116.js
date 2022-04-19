@@ -34,12 +34,14 @@ const productSchema = new Schema({
             },
             color: {
                 type: String, 
+               
             }
         }
     ],
     colors: [
         {
             type: String, 
+           
         }
     ],
 }, { timestamps: true })
