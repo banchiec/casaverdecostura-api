@@ -2,7 +2,8 @@ const router = require("express").Router();
 const authRoutes = require("./auth.routes");
 const productRoutes = require('./product.routes')
 const categoryRoutes = require('./category.routes')
-const purchaseRoutes = require('./category.routes')
+const purchaseRoutes = require('./category.routes') 
+const payRoutes = require("./pay.routes");
 const commentRoutes = require('./comment.routes')
 const discountRoutes = require('./discounts.routes')
 const uploadRoutes = require('./upload.routes')
@@ -15,6 +16,7 @@ router.get("/", (req, res, next) => {
 
 router.use('/auth', authRoutes);
 router.use('/products', productRoutes);
+router.use('/pay', payRoutes);
 router.use('/categories', categoryRoutes);
 router.use('/purchases', purchaseRoutes);
 router.use('/comments', commentRoutes);
