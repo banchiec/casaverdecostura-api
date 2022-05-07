@@ -3,7 +3,8 @@ const Product = require('../models/Product.model')
 
 router.get('/',(req, res) => {
 	try {
-		Product.find()
+		Product.find() 
+		.populate("beloning.idCategory")
 		.then((data)=>{
 			return res.status(200).json(data)
 		})
@@ -12,6 +13,22 @@ router.get('/',(req, res) => {
 		console.log(error);
 	}
 })
+ 
+ 
+router.get('/:id', async(req, res) => {
+    const {id} = req.params;  
+     try { 
+         const product = await Product.findById(id) 
+         return !product ?
+             res.status(402).json("Product not found") :
+             res.status(200).json(product)
+         
+     } catch (error) {
+         return res.status(500).json(error)
+     }
+})
+
+
 
 router.post('/', async (req, res) => {
 	const { name } = req.body
