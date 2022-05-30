@@ -25,7 +25,13 @@ const productSchema = new Schema({
             type: String,
             default: ['xs', 's', 'm', 'l','xl']
         }
-    ],
+    ], 
+    collections: [
+        {
+            type: String,
+            default: ['Verano', 'Primavera', 'Iniverno', 'Exclusiva','Costura']
+        }
+    ],  
     photos: [
         {
             url: {
@@ -41,7 +47,11 @@ const productSchema = new Schema({
         {
             type: String, 
         }
-    ],
+    ],  
+    cantidad : {
+         type: String    
+    },
+
 }, { timestamps: true })
 
 const Product=model("Product", productSchema);

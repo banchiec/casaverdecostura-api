@@ -11,10 +11,7 @@ router.get('/', async(req, res) => {
         return res.status(500).json(error)
     }
 }) 
- 
-
-
-
+  
 router.get('/:id' , async(req, res) => {
 
     const { id } = req.params;   
@@ -30,8 +27,6 @@ router.get('/:id' , async(req, res) => {
     }
 })   
   
-
-
 router.post('/new', async(req, res) => {
     const {name, subCategory} = req.body; 
      try { 

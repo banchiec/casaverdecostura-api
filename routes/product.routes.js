@@ -13,8 +13,6 @@ router.get('/',(req, res) => {
 		console.log(error);
 	}
 })
- 
- 
 router.get('/:id', async(req, res) => {
     const {id} = req.params;  
      try { 
@@ -27,9 +25,6 @@ router.get('/:id', async(req, res) => {
          return res.status(500).json(error)
      }
 })
-
-
-
 router.post('/', async (req, res) => {
 	const { name } = req.body
 	if(name){
