@@ -8,6 +8,24 @@ const productSchema = new Schema(
 		price: {
 			type: Number,
 		},
+		quantity: {
+			type: Number,
+		},
+		sale_price: {
+			type: Number,
+		},
+		description: {
+			type: String,
+		},
+		isNewArrival: {
+			type: Boolean,
+		},
+		size: [
+			{
+				type: String,
+				default: ['XL, XXL, L, M'],
+			},
+		],
 		beloning: {
 			idCategory: {
 				type: Schema.Types.ObjectId,
@@ -17,21 +35,9 @@ const productSchema = new Schema(
 				type: String,
 			},
 		},
-		description: {
-			type: String,
-		},
-		size: [
-			{
-				type: String,
-				default: ['XL, XXL, L, M'],
-			},
-		],
 		photos: [
 			{
 				url: {
-					type: String,
-				},
-				color: {
 					type: String,
 				},
 			},
